@@ -31,17 +31,18 @@ const LoginOptionCard = ({
         className
       )}
     >
-      <CardHeader className="pb-2">
-        <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-brand-teal/10 text-brand-teal">
-          {icon}
+      <CardHeader className="p-4 pb-1 space-y-1">
+        <div className="flex items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-teal/10 text-brand-teal">
+            {icon}
+          </div>
+          <CardTitle className="text-base font-semibold">{title}</CardTitle>
         </div>
-        <CardTitle className="text-xl font-semibold">{title}</CardTitle>
-        <CardDescription className="text-balance text-muted-foreground">
+        <CardDescription className="text-balance text-sm text-muted-foreground">
           {description}
         </CardDescription>
       </CardHeader>
-      <CardContent className="pb-2"></CardContent>
-      <CardFooter>
+      <CardFooter className="p-4 pt-2">
         <Button 
           onClick={onClick} 
           variant={isPrimary ? "default" : "outline"}
